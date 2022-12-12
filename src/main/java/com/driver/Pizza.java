@@ -77,7 +77,7 @@ public class Pizza {
     public String getBill(){
         // your code goes here
         if(!this.bills){
-            this.bill+="\n"+"Total Price:"+this.price;
+            this.bill+="\n"+"Total Price: "+this.price;
              this.bills=true;
         }
         return this.bill;
