@@ -19,10 +19,10 @@ public class Pizza {
         this.bills=false;
         if(isVeg){
             this.price=300;
-            this.bill="Base Price of The Pizza: 300";
+            this.bill="Base Price Of The Pizza: 300";
         }else{
             this.price=400;
-            this.bill="Base Price of The Pizza: 400";
+            this.bill="Base Price Of The Pizza: 400";
         }
     }
 
