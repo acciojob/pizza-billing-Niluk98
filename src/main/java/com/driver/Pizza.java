@@ -8,6 +8,7 @@ public class Pizza {
     protected boolean cheese;
     protected boolean takeaway;
     protected boolean topping;
+    private boolean bills;
 
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
@@ -15,12 +16,13 @@ public class Pizza {
         this.cheese=false;
         this.takeaway=false;
         this.topping=false;
+        this.bills=false;
         if(isVeg){
             this.price=300;
-            this.bill="Veg pizza base price : 300";
+            this.bill="Base Price of The Pizza: 300";
         }else{
             this.price=400;
-            this.bill="Non-veg pizza base price : 400";
+            this.bill="Base Price of The Pizza: 400";
         }
     }
 
@@ -74,7 +76,11 @@ public class Pizza {
 
     public String getBill(){
         // your code goes here
-        this.bill+="\n"+"Total Price:"+this.price;
+        if(!this.bills){
+            this.bill+="\n"+"Total Price:"+this.price;
+             this.bills=true;
+        }
         return this.bill;
+
     }
 }
